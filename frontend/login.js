@@ -1,21 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const signupForm = document.getElementById("signup-form");
+    const loginForm = document.getElementById("login-form");
 
-    signupForm.addEventListener("submit", async (event) => {
+    loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
 
-        // Send a POST request to your backend signup API
+        // Send a POST request to your backend login API
         try {
-            const response = await fetch("http://localhost:5000/api/user/signup", {
+            const response = await fetch("http://localhost:5000/api/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ name, email, password }),
+                body: JSON.stringify({ email, password }),
             });
 
             if (response.ok) {
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.location.href = "main.html";
             } else {
                 // Display error message
-                console.error("Signup failed.");
+                console.error("Login failed.");
             }
         } catch (error) {
             // Handle network or other errors

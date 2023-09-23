@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        //It will Send a POST request to your backend signup API
         try {
             const response = await fetch("http://localhost:5000/api/user/signup", {
                 method: "POST",
@@ -19,14 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (response.ok) {
-                // Redirect to the main blogging website page
-                window.location.href = "main.html";
+                const data = await response.json();
+                const userId = data.userId; // Store the user ID
+                window.location.href = "main.html"; // Redirect to the main page
             } else {
-                // Display error message
                 console.error("Signup failed.");
             }
         } catch (error) {
-            // Handle network or other errors
             console.error("Error:", error);
         }
     });

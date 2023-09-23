@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("login-email").value;
         const password = document.getElementById("login-password").value;
 
-        // Send a POST request to your backend login API
         try {
             const response = await fetch("http://localhost:5000/api/user/login", {
                 method: "POST",

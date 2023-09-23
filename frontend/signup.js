@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        // Send a POST request to your backend signup API
+        //It will Send a POST request to your backend signup API
         try {
             const response = await fetch("http://localhost:5000/api/user/signup", {
                 method: "POST",

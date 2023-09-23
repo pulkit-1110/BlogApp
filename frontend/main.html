@@ -4,27 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Blogging Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Include your CSS file here -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Blogging Page</h1>
-    <button id="logout-button">Logout</button>
-    <form id="blog-form">
-        <h2>Create a Blog</h2>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required><br>
+    <header>
+        <h1>Welcome to the Blogging Page</h1>
+        <button id="new-blog-button">Create New Blog</button>
+        <button id="logout-button">Logout</button>
+    </header>
 
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea><br>
-
-        <label for="image">Image URL:</label>
-        <input type="url" id="image" name="image" required><br>
-
-        <button type="submit">Create Blog</button>
-    </form>
-    <div id="blog-list">
-        <!-- Blogs will be displayed here -->
-    </div>
-    <script src="main.js"></script> <!-- Include your JavaScript file here -->
+    <main>
+        <section id="blog-list">
+            <!-- Blogs will be displayed here dynamically using JavaScript -->
+        </section>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>

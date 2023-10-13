@@ -17,7 +17,7 @@ Follow these steps to get the project up and running on your local machine:
 - cd blog-app
 - npm install
 3. Start the server
-4. Open your web browser and go to `http://localhost:3000` to access BlogApp.
+4. Open your web browser and go to `http://localhost:5000` to access BlogApp.
 
 ## Usage
 
